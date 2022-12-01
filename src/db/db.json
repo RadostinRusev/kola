@@ -1,89 +1,5 @@
 {
-  "user": [
-    {
-      "id": "76ca8ed3-161e-47b6-bca0-fb2ac90383d9",
-      "isActive": true,
-      "picture": "https://picsum.photos/id/237/200/300",
-      "name": "Leigh Clark",
-      "gender": "female",
-      "email": "leighclark@farmex.com",
-      "phone": "+1 (838) 535-3526",
-      "address": "394 National Drive, Bentley, Montana, 5952",
-      "password": "pass"
-    },
-    {
-      "id": "bd416eca-2ea5-49c2-9470-9a15dfbb5383",
-      "isActive": true,
-      "picture": "https://picsum.photos/id/237/200/300",
-      "name": "Crane Stevenson",
-      "gender": "male",
-      "email": "cranestevenson@farmex.com",
-      "phone": "+1 (915) 490-3488",
-      "address": "187 Oceanic Avenue, Shindler, Nevada, 3909",
-      "password": "pass"
-    },
-    {
-      "id": "b720c4b9-4f58-4bcb-846e-f548f8d9b95c",
-      "isActive": true,
-      "picture": "https://picsum.photos/id/237/200/300",
-      "name": "Bond Cochran",
-      "gender": "male",
-      "email": "bondcochran@farmex.com",
-      "phone": "+1 (952) 434-2436",
-      "address": "708 Beayer Place, Greensburg, Missouri, 9570",
-      "password": "pass"
-    },
-    {
-      "id": "d8fb74b3-4475-4e75-aa3b-99d6e02a958d",
-      "isActive": false,
-      "picture": "https://picsum.photos/id/237/200/300",
-      "name": "Darcy Sloan",
-      "gender": "female",
-      "email": "darcysloan@farmex.com",
-      "phone": "+1 (918) 472-2258",
-      "address": "935 Main Street, Ryderwood, Kansas, 6817",
-      "password": "pass"
-    },
-    {
-      "id": "3f3481fa-93dd-4e18-85bd-737cbbfeb0cd",
-      "isActive": false,
-      "picture": "https://picsum.photos/id/237/200/300",
-      "name": "Ella Rios",
-      "gender": "female",
-      "email": "ellarios@farmex.com",
-      "phone": "+1 (921) 531-3165",
-      "address": "817 Guider Avenue, Fulford, District Of Columbia, 3113",
-      "password": "pass"
-    },
-    {
-      "id": "6af0a034-979e-44e6-815b-7f3c21146e71",
-      "isActive": true,
-      "picture": "https://picsum.photos/id/237/200/300",
-      "name": "Olga Reid",
-      "gender": "female",
-      "email": "olgareid@farmex.com",
-      "phone": "+1 (871) 536-2967",
-      "address": "194 Schweikerts Walk, Tilleda, American Samoa, 4096",
-      "password": "pass"
-    },
-    {
-      "isActive": false,
-      "name": "az",
-      "picture": "https://picsum.photos/id/237/200/300",
-      "email": "rado@gmail.com",
-      "phone": "0885995363",
-      "address": "y nas",
-      "id": "-sR4BEx",
-      "password": "pass"
-    }
-  ],
   "users": [
-    {
-      "id": "76ca8ed3-161e-47b6-bca0-fb2ac90383d9",
-      "name": "Leigh Clark",
-      "email": "leighclark@farmex.com",
-      "phone": "+1 (838) 535-3526"
-    },
     {
       "id": "bd416eca-2ea5-49c2-9470-9a15dfbb5383",
       "name": "Crane Stevenson",
@@ -132,7 +48,7 @@
       },
       "fuelType": "petrol",
       "numberOfSeats": "12",
-      "picture": "https://picsum.photos/id/237/200/300",
+      "picture": "https://webnews.bg/uploads/images/76/4976/404976/768x432.jpg?",
       "pricePerDay": 10,
       "count": 7
     },
@@ -146,9 +62,9 @@
       },
       "fuelType": "petrol",
       "numberOfSeats": "12",
-      "picture": "https://picsum.photos/id/237/200/300",
+      "picture": "https://webnews.bg/uploads/images/76/4976/404976/768x432.jpg?",
       "pricePerDay": 10,
-      "count": 7,
+      "count": 6,
       "constuctionYear": "2022",
       "model": "passat2"
     },
@@ -162,7 +78,7 @@
       },
       "fuelType": "petrol",
       "numberOfSeats": "12",
-      "picture": "https://picsum.photos/id/237/200/300",
+      "picture": "https://webnews.bg/uploads/images/76/4976/404976/768x432.jpg?",
       "pricePerDay": 10,
       "count": 7
     },
@@ -176,9 +92,48 @@
       },
       "fuelType": "petrol",
       "numberOfSeats": "12",
-      "picture": "https://picsum.photos/id/237/200/300",
+      "picture": "https://webnews.bg/uploads/images/76/4976/404976/768x432.jpg?",
       "pricePerDay": 10,
-      "count": 7
+      "count": 6
+    },
+    {
+      "vechileType": "",
+      "vehicle": {
+        "brand": "VW",
+        "model": "BMW",
+        "constuctionYear": "2022",
+        "picture": "https://picsum.photos/id/237/200/300",
+        "pricePerDay": "12"
+      },
+      "fuelType": "",
+      "numberOfSeats": "",
+      "picture": "https://picsum.photos/id/237/200/300",
+      "pricePerDay": "12",
+      "count": "",
+      "brand": "VW",
+      "model": "BMW",
+      "constuctionYear": "2022",
+      "id": "-Jx8flF"
+    },
+    {
+      "vechileType": "",
+      "vehicle": {
+        "brand": "VW",
+        "model": "passat2",
+        "constuctionYear": "2022",
+        "count": "12",
+        "pricePerDay": "130",
+        "picture": "https://picsum.photos/id/237/200/300"
+      },
+      "fuelType": "",
+      "numberOfSeats": "",
+      "picture": "https://picsum.photos/id/237/200/300",
+      "pricePerDay": "130",
+      "count": "12",
+      "constuctionYear": "2022",
+      "model": "passat2",
+      "brand": "VW",
+      "id": "2ZIVH8d"
     }
   ]
 }

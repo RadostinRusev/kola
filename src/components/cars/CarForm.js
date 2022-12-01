@@ -3,24 +3,10 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './CarFrom.scss'
 import {useEffect, useState} from 'react';
-import { getCarById, getUserById, saveCar, saveUser } from '../../utils/http-utils/user-requests';
+import { getCarById, saveCar } from '../../utils/http-utils/user-requests';
 import { useNavigate, useParams } from 'react-router-dom';
-import { FormSelect } from 'react-bootstrap';
 export function CarFrom(){
 
-//     "id":"3f3481fa-93dd-4e18-85bd-737cbbfeb0c0",
-//     "vechileType": "economy",
-//     "vehicle": {
-//       "brand": "VW",
-//       "model": "passat",
-//       "constuctionYear": 2000
-//     },
-//     "fuelType": "petrol",
-//     "numberOfSeats": "12",
-//     "picture":"https://picsum.photos/id/237/200/300",
-//     "pricePerDay":10,
-//     "count":7
-//   },
   const params = useParams();
   const [car,setCar] = useState({
     vechileType: '',
@@ -45,7 +31,10 @@ export function CarFrom(){
   const navigate = useNavigate();
   const onFromSubmit = (event) =>{
     event.preventDefault();
-
+        if(car.constuctionYear<1970){
+            alert("car Too old should be newer then 1970");
+            return;
+        }
     saveCar(car).then(()=>{
       navigate('/car-list')
     })
@@ -88,22 +77,22 @@ export function CarFrom(){
           </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>brand</Form.Label>
-          <Form.Control type="text" placeholder="Enter email" value={car.vehicle.brand} onChange={onInputChange} name="brand" />
+          <Form.Control type="text" placeholder="Enter brand" value={car.vehicle.brand} onChange={onInputChange} name="brand" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword" >
           <Form.Label>model</Form.Label>
-          <Form.Control type="text" placeholder="enterPhone" onChange={onInputChange} value={car.vehicle.model} name="model"/>
+          <Form.Control type="text" placeholder="Enter model" onChange={onInputChange} value={car.vehicle.model} name="model"/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword" >
           <Form.Label>constuctionYear</Form.Label>
-          <Form.Control type="text" placeholder="enterPhone" onChange={onInputChange} value={car.vehicle.constuctionYear} name="constuctionYear"/>
+          <Form.Control type="number" placeholder="enter construction year" onChange={onInputChange} value={car.vehicle.constuctionYear} name="constuctionYear"/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword" >
           <Form.Label>fuelType</Form.Label>
           <Form.Select value={car.fuelType} onChange={handleChange} name="fuelType">
             <option value="petrol">petrol</option>
             <option value="diesel">diesel</option>
-            <option value="cargo">cargo</option>
+            <option value="hybrid">hybrid</option>
             <option value="electric">electric</option>
           </Form.Select>
         </Form.Group>
@@ -121,7 +110,11 @@ export function CarFrom(){
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword" >
           <Form.Label>Price per day in EUR</Form.Label>
-          <Form.Control type="text" placeholder="enterPhone" onChange={onInputChange} value={car.pricePerDay} name="pricePerDay"/>
+          <Form.Control type="text" placeholder="price" onChange={onInputChange} value={car.pricePerDay} name="pricePerDay"/>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicPassword" >
+          <Form.Label>Number of Cars avadable</Form.Label>
+          <Form.Control type="text" placeholder="count" onChange={onInputChange} value={car.count} name="count"/>
         </Form.Group>
         <Button variant="primary" type="submit">
           Submit

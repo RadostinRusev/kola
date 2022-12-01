@@ -30,6 +30,14 @@ export function UserCard({user,deleteUser}){
                  {user.email}
                  </span>
                 </Card.Text>
+                <Card.Text>
+                 <span className='key'>
+                     Phone: 
+                 </span>
+                 <span className='value'>
+                 {user.phone}
+                 </span>
+                </Card.Text>
                 <div className='btn-holder'>
                 <Button variant="primary" onClick={redirectToEdit}>Edit</Button>
                 <Button variant="primary" onClick={()=>deleteUser(user.id)}>Delete</Button>

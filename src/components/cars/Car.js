@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getCarById, getUserById } from "../../utils/http-utils/user-requests";
+import { getCarById } from "../../utils/http-utils/user-requests";
 import { CarCard } from "./CarCard";
 
 export function Car(props){

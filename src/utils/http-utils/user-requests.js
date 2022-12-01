@@ -11,6 +11,10 @@ export function getUserById(id){
     return axios.get(`${usersUrl}/${id}`)
 }
 
+export function getUserByEmail(email){
+    return axios.get(`${usersUrl}/?email=${email}`)
+}
+
 export function deleteUserById(id){
     return axios.delete(`${usersUrl}/${id}`)
 }
@@ -22,28 +26,6 @@ export function saveUser(user){
     }
 
     return axios.post(`${usersUrl}`,user)
-}
-
-export async function registerUser(user){
- const existingUser =  (await  axios.get(`${usersUrl}?email=${user.email}`)).data;
-   if(existingUser.lenght>0){
-    throw new Error('User with email alredy exist')
-   }
-
-   return saveUser(user)
-}
-export async function login(user){
-    const allUsers = await (await getAllUsers()).data;
-
-    const foundUser = allUsers.find(u=>u.email===user.email && u.password === user.password)
-
-    if(!foundUser){
-        throw new Error('invalid password')
-    }
-
-    localStorage.setItem('loggedUser',JSON.stringify(foundUser));
-
-    return foundUser;
 }
 
 export function getLoogedUser(){
@@ -74,7 +56,14 @@ export function saveCar(car){
         return axios.put(`${carsUrl}/${car.id}`,car)
     }
 
-    return axios.post(`${usersUrl}`,car)
+    return axios.post(`${carsUrl}`,car)
+}
+export async function rentCar(rent,carId){
+
+    const user = await getUserByEmail(rent.email)
+    const car =  await (await getCarById(carId)).data
+    car.count = car.count -1;
+    saveCar(car)
 }
 
 // export async function createCar(car){

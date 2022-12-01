@@ -13,6 +13,9 @@ export function CarCard({car,deleteCar}){
   const redirectToEdit = () =>{
     navigate(`/car/edit/${car.id}`);
 }
+const redirectToRent = () =>{
+    navigate(`/car/rent/${car.id}`);
+}
 
   if(!car){
     return <p>no car</p>
@@ -54,8 +57,17 @@ export function CarCard({car,deleteCar}){
                  {car.pricePerDay}
                  </span>
                 </Card.Text>
+                <Card.Text>
+                 <span className='key'>
+                 Avadable cars: 
+                 </span>
+                 <span className='value'>
+                 {car.count}
+                 </span>
+                </Card.Text>
                 <div className='btn-holder'>
                 <Button variant="primary" onClick={redirectToEdit}>Edit</Button>
+                <Button variant="primary" onClick={redirectToRent}>Rent</Button>
                 <Button variant="primary" onClick={()=>deleteCar(car.id)}>Delete</Button>
                 <Button variant="info" onClick={redirectToDetails}>Details</Button>
                 </div>
